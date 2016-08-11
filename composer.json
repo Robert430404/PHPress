@@ -1,0 +1,14 @@
+{
+    "name": "robert430404/phpress",
+    "description": "This is a set of tools for integrating WordPress with your framework of choice.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Cox",
+            "email": "robert@studiorclv.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
