@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpress;
+namespace Phpress\ClassAbstractions;
 
 class WPQuery extends \WP_Query
 {
@@ -42,14 +42,14 @@ class WPQuery extends \WP_Query
     /**
      * CustomWPQuery constructor.
      */
-	public function __construct()
-	{
-		$this->postType   = 'posts';
-		$this->totalPosts = '10';
-		$this->order      = 'ASC';
-        $this->page       = 1;
-        $this->args       = [];
-	}
+    public function __construct()
+    {
+    	$this->postType   = 'posts';
+    	$this->totalPosts = '10';
+    	$this->order      = 'ASC';
+    	$this->page       = 1;
+    	$this->args       = [];
+    }
 
 	/**
 	 * Sets the total for the query if called
@@ -116,15 +116,15 @@ class WPQuery extends \WP_Query
      */
     public function setPage($page)
     {
-		if(isset($this->args['paged']))
-		{
-			unset($this->args['paged']);
-		}
+    	if(isset($this->args['paged']))
+    	{
+    		unset($this->args['paged']);
+    	}
 
-		$this->page = $page;
-		$this->args = array_merge($this->args, ['paged' => $this->page]);
+    	$this->page = $page;
+    	$this->args = array_merge($this->args, ['paged' => $this->page]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -135,14 +135,14 @@ class WPQuery extends \WP_Query
      */
     public function setAuthor($author)
     {
-		if(isset($this->args['author']))
-		{
-			unset($this->args['author']);
-		}
+    	if(isset($this->args['author']))
+    	{
+    		unset($this->args['author']);
+    	}
 
-		$this->args = array_merge($this->args, ['author' => $author]);
+    	$this->args = array_merge($this->args, ['author' => $author]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -153,14 +153,14 @@ class WPQuery extends \WP_Query
      */
     public function setAuthorName($author)
     {
-		if(isset($this->args['author_name']))
-		{
-			unset($this->args['author_name']);
-		}
+    	if(isset($this->args['author_name']))
+    	{
+    		unset($this->args['author_name']);
+    	}
 
-		$this->args = array_merge($this->args, ['author_name' => $author]);
+    	$this->args = array_merge($this->args, ['author_name' => $author]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -171,14 +171,14 @@ class WPQuery extends \WP_Query
      */
     public function setPostStatus($status)
     {
-		if(isset($this->args['post_status']))
-		{
-			unset($this->args['post_status']);
-		}
+    	if(isset($this->args['post_status']))
+    	{
+    		unset($this->args['post_status']);
+    	}
 
-		$this->args = array_merge($this->args, ['post_status' => $status]);
+    	$this->args = array_merge($this->args, ['post_status' => $status]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -189,14 +189,14 @@ class WPQuery extends \WP_Query
      */
     public function setCategory($cat)
     {
-		if(isset($this->args['cat']))
-		{
-			unset($this->args['cat']);
-		}
+    	if(isset($this->args['cat']))
+    	{
+    		unset($this->args['cat']);
+    	}
 
-		$this->args = array_merge($this->args, ['cat' => $cat]);
+    	$this->args = array_merge($this->args, ['cat' => $cat]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -207,14 +207,14 @@ class WPQuery extends \WP_Query
      */
     public function setCategoryName($catName)
     {
-		if(isset($this->args['category_name']))
-		{
-			unset($this->args['category_name']);
-		}
+    	if(isset($this->args['category_name']))
+    	{
+    		unset($this->args['category_name']);
+    	}
 
-		$this->args = array_merge($this->args, ['category_name' => $catName]);
+    	$this->args = array_merge($this->args, ['category_name' => $catName]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -225,14 +225,14 @@ class WPQuery extends \WP_Query
      */
     public function setTag($tag)
     {
-		if(isset($this->args['tag_id']))
-		{
-			unset($this->args['tag_id']);
-		}
+    	if(isset($this->args['tag_id']))
+    	{
+    		unset($this->args['tag_id']);
+    	}
 
-		$this->args = array_merge($this->args, ['tag_id' => $tag]);
+    	$this->args = array_merge($this->args, ['tag_id' => $tag]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -243,14 +243,14 @@ class WPQuery extends \WP_Query
      */
     public function setTagName($tagName)
     {
-		if(isset($this->args['tag']))
-		{
-			unset($this->args['tag']);
-		}
+    	if(isset($this->args['tag']))
+    	{
+    		unset($this->args['tag']);
+    	}
 
-		$this->args = array_merge($this->args, ['tag' => $tagName]);
+    	$this->args = array_merge($this->args, ['tag' => $tagName]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -261,14 +261,14 @@ class WPQuery extends \WP_Query
      */
     public function setTaxQuery($query)
     {
-		if(isset($this->args['tax_query']))
-		{
-			unset($this->args['tax_query']);
-		}
+    	if(isset($this->args['tax_query']))
+    	{
+    		unset($this->args['tax_query']);
+    	}
 
-		$this->args = array_merge($this->args, ['tax_query' => $query]);
+    	$this->args = array_merge($this->args, ['tax_query' => $query]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -279,14 +279,14 @@ class WPQuery extends \WP_Query
      */
     public function setMetaQuery($query)
     {
-		if(isset($this->args['meta_query']))
-		{
-			unset($this->args['meta_query']);
-		}
+    	if(isset($this->args['meta_query']))
+    	{
+    		unset($this->args['meta_query']);
+    	}
 
-		$this->args = array_merge($this->args, ['meta_query' => $query]);
+    	$this->args = array_merge($this->args, ['meta_query' => $query]);
 
-		return $this;
+    	return $this;
     }
 
     /**
@@ -295,7 +295,7 @@ class WPQuery extends \WP_Query
      */
     public function getArgs()
     {
-		return $this->args;
+    	return $this->args;
     }
 
 	/**
