@@ -5,42 +5,32 @@ namespace Phpress\ClassAbstractions;
 class WPQuery extends \WP_Query
 {
     /**
-     * Container for the arguements for the query
-     *
      * @var array
      */
     protected $args;
 
     /**
-     * Container for the query post total
-     *
-     * @var integer
+     * @var string
      */
     public $postType;
 
     /**
-     * Container for the query post total
-     *
-     * @var integer
+     * @var string
      */
     public $totalPosts;
 
     /**
-     * Container for the query order
-     *
      * @var string
      */
     public $order;
 
     /**
-     * Container for the query order
-     *
-     * @var string
+     * @var int
      */
     public $page;
 
     /**
-     * CustomWPQuery constructor.
+     * WPQuery constructor.
      */
     public function __construct()
     {
@@ -52,10 +42,10 @@ class WPQuery extends \WP_Query
     }
 
     /**
-     * Sets the total for the query if called
+     * Sets Post Type For The Query
      *
-     * @param  Integer $postType Container for the query post total
-     * @return object  $this
+     * @param  string $postType
+     * @return object $this
      */
     public function setPostType($postType)
     {
@@ -70,10 +60,10 @@ class WPQuery extends \WP_Query
     }
 
     /**
-     * Sets the total for the query if called
+     * Sets Total Posts For Query To Retrieve
      *
-     * @param Integer $total Container for the query post total
-     * @return object $this
+     * @param  integer $total Container for the query post total
+     * @return object  $this
      */
     public function setTotalPosts($total)
     {
