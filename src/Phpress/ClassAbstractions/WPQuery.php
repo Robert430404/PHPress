@@ -302,8 +302,6 @@ class WPQuery extends \WP_Query
      */
     public function __destruct()
     {
-        echo 'object gone <br />';
-        echo microtime();
-        //wp_reset_query();
+        wp_reset_query();
     }
 }
