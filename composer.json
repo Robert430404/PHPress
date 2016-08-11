@@ -9,6 +9,6 @@
             "email": "robert@studiorclv.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
