@@ -7,8 +7,8 @@ class ContentHelpers
     /**
      * This runs the content through output formatting
      *
-     * @param  integer $id this is the content wordpress id
-     * @param  string $key this is the content wordpress meta key
+     * @param  integer $id      this is the content wordpress id
+     * @param  string  $key     this is the content wordpress meta key
      * @param  boolean $boolean this is the boolean to control return type for single
      * @return string           this is the formatted content after filtering
      */
@@ -38,8 +38,8 @@ class ContentHelpers
     /**
      * This runs the excerpt through output formatting
      *
-     * @param  string $excerpt this is the excerpt
-     * @param  integer $length this is the length of the excerpt
+     * @param  string  $excerpt this is the excerpt
+     * @param  integer $length  this is the length of the excerpt
      * @return string           this is the formatted excerpt agit fter filtering
      */
     static function formatPostExcerpt($excerpt, $length = 255)
@@ -55,8 +55,8 @@ class ContentHelpers
     /**
      * This creates a single call to retrieve the image from wordpress
      *
-     * @param  integer $id this is the content wordpress id
-     * @param  string $key this is the content wordpress meta key
+     * @param  integer $id      this is the content wordpress id
+     * @param  string  $key     this is the content wordpress meta key
      * @param  boolean $boolean this is the boolean to control return type for single
      * @return string           this is the url of the image from WordPress
      */
