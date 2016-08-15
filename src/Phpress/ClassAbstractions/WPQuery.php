@@ -34,11 +34,17 @@ class WPQuery extends \WP_Query
      */
     public function __construct()
     {
-        $this->postType = 'posts';
+        $this->postType   = 'posts';
         $this->totalPosts = '10';
-        $this->order = 'ASC';
-        $this->page = 1;
-        $this->args = [];
+        $this->order      = 'ASC';
+        $this->page       = 1;
+        $this->args       = [];
+
+        // Sets Up The Default Arguments
+        $this->args = array_merge($this->args, ['post_type' => $this->postType]);
+        $this->args = array_merge($this->args, ['posts_per_page' => $this->totalPosts]);
+        $this->args = array_merge($this->args, ['order' => $this->order]);
+        $this->args = array_merge($this->args, ['paged' => $this->page]);
     }
 
     /**
@@ -268,6 +274,7 @@ class WPQuery extends \WP_Query
 
     /**
      * Returns the current args array
+     *
      * @return array These are the args for the query
      */
     public function getArgs()
