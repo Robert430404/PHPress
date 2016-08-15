@@ -34,13 +34,14 @@ class WPQuery extends \WP_Query
      */
     public function __construct()
     {
+        // Sets Default Values On Base Properties
         $this->postType   = 'posts';
         $this->totalPosts = '10';
         $this->order      = 'ASC';
         $this->page       = 1;
         $this->args       = [];
 
-        // Sets Up The Default Arguments
+        // Inserts Base Values Into The Arguments Array
         $this->args = array_merge($this->args, ['post_type' => $this->postType]);
         $this->args = array_merge($this->args, ['posts_per_page' => $this->totalPosts]);
         $this->args = array_merge($this->args, ['order' => $this->order]);
