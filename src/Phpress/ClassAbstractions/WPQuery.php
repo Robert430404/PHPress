@@ -61,7 +61,7 @@ class WPQuery extends \WP_Query
         }
 
         $this->postType = $postType;
-        $this->args = array_merge($this->args, ['post_type' => $this->postType]);
+        $this->args     = array_merge($this->args, ['post_type' => $this->postType]);
 
         return $this;
     }
@@ -79,7 +79,7 @@ class WPQuery extends \WP_Query
         }
 
         $this->totalPosts = $total;
-        $this->args = array_merge($this->args, ['posts_per_page' => $this->totalPosts]);
+        $this->args       = array_merge($this->args, ['posts_per_page' => $this->totalPosts]);
 
         return $this;
     }
@@ -97,7 +97,7 @@ class WPQuery extends \WP_Query
         }
 
         $this->order = $order;
-        $this->args = array_merge($this->args, ['order' => $this->order]);
+        $this->args  = array_merge($this->args, ['order' => $this->order]);
 
         return $this;
     }

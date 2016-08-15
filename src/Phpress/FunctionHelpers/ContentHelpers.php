@@ -14,8 +14,8 @@ class ContentHelpers
      */
     static function formatMetaContent($id, $key, $boolean)
     {
-        $rawContent = get_post_meta($id, $key, $boolean);
-        $filteredContent = apply_filters('the_content', $rawContent);
+        $rawContent       = get_post_meta($id, $key, $boolean);
+        $filteredContent  = apply_filters('the_content', $rawContent);
         $formattedContent = preg_replace("/\r\n|\r|\n/", '', $filteredContent);
 
         return $formattedContent;
@@ -29,7 +29,7 @@ class ContentHelpers
      */
     static function formatPostContent($content)
     {
-        $rawContent = apply_filters('the_content', $content);
+        $rawContent       = apply_filters('the_content', $content);
         $formattedContent = preg_replace("/\r\n|\r|\n/", '', $rawContent);
 
         return $formattedContent;
@@ -44,9 +44,9 @@ class ContentHelpers
      */
     static function formatPostExcerpt($excerpt, $length = 255)
     {
-        $excerpt = strip_tags($excerpt);
-        $excerpt = strip_shortcodes($excerpt);
-        $rawExcerpt = substr($excerpt, 0, $length) . '...';
+        $excerpt          = strip_tags($excerpt);
+        $excerpt          = strip_shortcodes($excerpt);
+        $rawExcerpt       = substr($excerpt, 0, $length) . '...';
         $formattedExcerpt = preg_replace("/\r\n|\r|\n/", '', $rawExcerpt);
 
         return $formattedExcerpt;
@@ -62,7 +62,7 @@ class ContentHelpers
      */
     static function getMetaImage($id, $key, $boolean)
     {
-        $imageId = get_post_meta($id, $key, $boolean);
+        $imageId  = get_post_meta($id, $key, $boolean);
         $imageUrl = wp_get_attachment_url($imageId);
 
         return $imageUrl;
@@ -77,7 +77,7 @@ class ContentHelpers
     static function getPostThumbnail($postId)
     {
         $thumbnail = get_post_thumbnail_id($postId);
-        $imageUrl = wp_get_attachment_url($thumbnail);
+        $imageUrl  = wp_get_attachment_url($thumbnail);
 
         return $imageUrl;
     }
