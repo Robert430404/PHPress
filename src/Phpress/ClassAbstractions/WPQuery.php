@@ -2,7 +2,7 @@
 
 namespace Phpress\ClassAbstractions;
 
-class WPQuery// extends \WP_Query
+class WPQuery extends \WP_Query
 {
     /**
      * @var array
@@ -290,7 +290,7 @@ class WPQuery// extends \WP_Query
      */
     public function createQuery()
     {
-        //parent::__construct($this->args);
+        parent::__construct($this->args);
     }
 
     /**
@@ -300,6 +300,6 @@ class WPQuery// extends \WP_Query
      */
     public function __destruct()
     {
-        //wp_reset_query();
+        wp_reset_query();
     }
 }

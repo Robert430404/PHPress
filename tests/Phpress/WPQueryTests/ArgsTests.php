@@ -51,27 +51,27 @@ class ArgsTests
 
         $query          = new WPQuery();
         $chainedMethods = $query->setPostType('posts')
-            ->setTotalPosts(10)
-            ->setOrder('ASC')
-            ->setPage(1)
-            ->setAuthor(0)
-            ->setAuthorName('Test Name')
-            ->setPostStatus('publish')
-            ->setCategory(0)
-            ->setCategoryName('Test Category')
-            ->setTag(0)
-            ->setTagName('Test Tag')
-            ->setTaxQuery([
-                'taxonomy' => 'post-type-tax',
-                'field'    => 'post-field',
-                'terms'    => 'post-field-value',
-            ])
-            ->setMetaQuery([
-                'meta_key'     => 'meta-key-name',
-                'meta_value'   => 'key-value',
-                'meta_compare' => '!='
-            ])
-            ->getArgs();
+                                ->setTotalPosts(10)
+                                ->setOrder('ASC')
+                                ->setPage(1)
+                                ->setAuthor(0)
+                                ->setAuthorName('Test Name')
+                                ->setPostStatus('publish')
+                                ->setCategory(0)
+                                ->setCategoryName('Test Category')
+                                ->setTag(0)
+                                ->setTagName('Test Tag')
+                                ->setTaxQuery([
+                                    'taxonomy' => 'post-type-tax',
+                                    'field'    => 'post-field',
+                                    'terms'    => 'post-field-value',
+                                ])
+                                ->setMetaQuery([
+                                    'meta_key'     => 'meta-key-name',
+                                    'meta_value'   => 'key-value',
+                                    'meta_compare' => '!='
+                                ])
+                                ->getArgs();
 
         if(is_array($chainedMethods))
         {
@@ -95,7 +95,6 @@ class ArgsTests
 
         TestHelpers::output('Method Chaining Test   ', 'ENDED');
         TestHelpers::output('Method Chaining Results', $i . ' Tests Failed');
-        TestHelpers::insertSeperator();
 
         return null;
     }
