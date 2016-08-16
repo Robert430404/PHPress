@@ -24,4 +24,12 @@ class TestHelpers
         }
         echo "\r\n";
     }
+
+    static function insertSeperator()
+    {
+        echo "\r\n";
+        echo "====================";
+        echo "\r\n";
+        echo "\r\n";
+    }
 }

@@ -16,3 +16,4 @@ use Phpress\Tests\WPQueryTests\ArgsTests;
  */
 $ArgsTests = new ArgsTests();
 $ArgsTests->testBaseArgs();
+$ArgsTests->testMethodChaining();

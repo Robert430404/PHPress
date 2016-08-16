@@ -38,14 +38,18 @@ class ArgsTests
 
         TestHelpers::output('Base Args Test   ', 'ENDED');
         TestHelpers::output('Base Args Results', $i . ' Tests Failed');
+        TestHelpers::insertSeperator();
 
         return null;
     }
 
     public function testMethodChaining()
     {
-        $query = new WPQuery();
+        $i = 0;
 
+        TestHelpers::output('Method Chaining Test   ', 'STARTED');
+
+        $query          = new WPQuery();
         $chainedMethods = $query->setPostType('posts')
             ->setTotalPosts(10)
             ->setOrder('ASC')
@@ -69,9 +73,30 @@ class ArgsTests
             ])
             ->getArgs();
 
+        if(is_array($chainedMethods))
+        {
+            TestHelpers::output('Method Chaining Array  ', 'PASS');
 
-        $this->assertNotEmpty($chainedMethods);
+            if(!empty($chainedMethods))
+            {
+                TestHelpers::output('Method Chaining Built  ', 'PASS');
+            }
+            else
+            {
+                TestHelpers::output('Method Chaining Built  ', 'FAIL');
+                $i++;
+            }
+        }
+        else
+        {
+            TestHelpers::output('Method Chaining Array  ', 'FAIL');
+            $i++;
+        }
 
-        return $chainedMethods;
+        TestHelpers::output('Method Chaining Test   ', 'ENDED');
+        TestHelpers::output('Method Chaining Results', $i . ' Tests Failed');
+        TestHelpers::insertSeperator();
+
+        return null;
     }
 }
