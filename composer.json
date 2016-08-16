@@ -12,9 +12,9 @@
   "minimum-stability": "stable",
   "require": {},
   "autoload": {
-    "psr-0": {
-      "Phpress": "src/",
-      "Phpress\\Tests": "tests/"
+    "psr-4": {
+      "Phpress\\": "src/Phpress",
+      "Phpress\\Tests\\": "tests/Phpress"
     }
   }
 }
